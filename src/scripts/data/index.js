@@ -1,19 +1,7 @@
 import generateId from "../modules/generateId.js";
 
 const data = {
-  todoList: [
-    {
-        _id: '0',
-        name: "Tirar o lixo",
-        done: false,
-    },
-    {
-        _id: '1',
-        name: "Lavar a louça",
-        done: true,
-    },
-  ],
-
+  todoList: [],
   set: (newData) => {
     data.todoList = [...newData]
   },
@@ -29,8 +17,16 @@ const data = {
     return [...data.todoList]
   },
 
-  update: () => {
+  update: (id, newData) => {
+    const list = data.read()
 
+    const newList = list.map((item) => {
+      const data = {...item, ...newData}
+      if (item._id === id) return data
+      if (item._id !== id) return item
+    })
+
+    data.set(newList)
   },
 
   delete: (id) => {

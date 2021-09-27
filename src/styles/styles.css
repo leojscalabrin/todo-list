@@ -1,0 +1,130 @@
+*{
+    font-family: 'Dela Gothic One', cursive;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(218, 255, 242, 0.8);
+}
+
+.box-title{
+    background-color: rgba(50, 207, 152, 0.5);
+    width: 400px;
+    height: 70px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.box-task{
+    margin-top: 20px;
+    min-width: 400px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+.form-box{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    transform: translateY(-20px);
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-new-task{
+    bottom: 165px;
+    width: 200px;
+    height: 40px;
+    color: #FFFFFF;
+    background-color: #32CF98;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button-new-task:hover{
+    transition-duration: 250ms;
+    background-color: #6fd1af;
+    transform: scale(110%);
+}
+
+.button-adicionar-tarefa{
+    width: 200px;
+    height: 40px;
+    color: #FFFFFF;
+    background-color: #32CF98;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
+
+.task-wrapper {
+    justify-content: flex-start;
+    width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    color: #b3ec2a;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.delete-trash{
+    position: absolute;
+    right: 1%;
+    justify-content: center;
+    width: 30px;
+}
+
+.span-checkbox-on{
+    text-decoration: line-through #88d8bc;
+}
+
+.span-checkbox{
+    width: 100%;
+}
+
+.checkbox {
+    width: 7px;
+    height: 7px;
+    margin-right: 15px;
+    border: 2px solid #32CF98;
+    border-radius: 50%; 
+}
+
+.checked {
+    background-color: #32CF98;
+}
+
+.input-create {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.hide{
+    display: none;
+}

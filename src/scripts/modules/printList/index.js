@@ -1,10 +1,12 @@
 import Task from '../../components/Task/index.js'
 
-const printList = (list, parent) => {
-    list.forEach((item) => {
-        const task = Task()
+const printList = (list, $parent, clear = true) => {
+    if (clear) $parent.innerHTML = ''
 
-        parent.appendChild(task)
+    list.forEach((item) => {
+        const task = Task(item)
+
+        $parent.appendChild(task)
     })
 }
 
