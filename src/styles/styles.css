@@ -91,10 +91,10 @@ body{
 }
 
 .delete-trash{
-    position: absolute;
     right: 1%;
     justify-content: center;
     width: 30px;
+    cursor: pointer;
 }
 
 .span-checkbox-on{

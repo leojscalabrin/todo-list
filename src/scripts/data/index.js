@@ -1,40 +1,41 @@
-import generateId from "../modules/generateId.js";
+import generateId from "../modules/generateId/index.js";
+import storage from "../modules/storage/index.js";
 
 const data = {
-  todoList: [],
   set: (newData) => {
-    data.todoList = [...newData]
+    storage.set('todoList', newData)
   },
 
   create: (task) => {
-    const list = data.read()
-    const id = generateId(40)
+    const list = data.read();
+    const id = generateId(40);
 
-    data.set([...list, {_id: id, ...task}])
+    data.set([...list, {_id: id, ...task}]);
   },
 
   read: () => {
-    return [...data.todoList]
+    const todoList = storage.get('todoList')
+    return todoList ? todoList : [];
   },
 
   update: (id, newData) => {
-    const list = data.read()
+    const list = data.read();
 
     const newList = list.map((item) => {
-      const data = {...item, ...newData}
-      if (item._id === id) return data
-      if (item._id !== id) return item
+      const data = {...item, ...newData};
+      if (item._id === id) return data;
+      if (item._id !== id) return item;
     })
 
-    data.set(newList)
+    data.set(newList);
   },
 
   delete: (id) => {
-    const list = data.read()
-    const newTodoList = data.todoList.filter((item) => item._id !== id)
+    const list = data.read();
+    const newTodoList = list.todoList.filter((item) => item._id !== id);
 
-    data.set(newTodoList)
+    data.set(newTodoList);
   }
 };
 
-export default data;
+export default data

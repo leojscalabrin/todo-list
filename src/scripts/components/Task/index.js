@@ -3,11 +3,7 @@ import printList from '../../modules/printList/index.js'
 import Element from '../Element/index.js'
 
 const Task = (props) => {
-    const _taskWrapper = Element({
-        type: 'li',
-        classList: ['task-wrapper'],
-        children: [_checkbox, _spanCheckbox, _inputHide, _deleteTrash]
-    })
+    
 
     const _checkbox = Element({
         type: 'div',
@@ -61,6 +57,12 @@ const Task = (props) => {
             data.delete(props._id)
             printList(data.read(), $parent)
         }
+    })
+
+    const _taskWrapper = Element({
+        type: 'li',
+        classList: ['task-wrapper'],
+        children: [_checkbox, _spanCheckbox, _inputHide, _deleteTrash]
     })
 
     return _taskWrapper

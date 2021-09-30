@@ -1,5 +1,6 @@
 import data from './data/index.js'
 import printList from './modules/printList/index.js'
+import storage from './modules/storage/index.js'
 
 const $parent = document.querySelector('.box-task')
 const $inputCreate = document.querySelector('.input-create')
