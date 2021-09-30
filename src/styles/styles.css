@@ -90,11 +90,24 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.task-wrapper:hover{
+    background-color: #edfdf6;
+    transition-duration: 250ms;
+    font-size: 20px;
+    border-radius: 5%;
+}
+
 .delete-trash{
     right: 1%;
     justify-content: center;
     width: 30px;
     cursor: pointer;
+}
+
+.delete-trash:hover{
+    transform: scale(110%);
+    transition-duration: 250ms;
+    opacity: 25%;
 }
 
 .span-checkbox-on{
@@ -121,10 +134,10 @@ body{
     display: none;
 }
 
-.show {
-    display: flex;
-}
-
 .hide{
     display: none;
+}
+
+.show {
+    display: flex;
 }

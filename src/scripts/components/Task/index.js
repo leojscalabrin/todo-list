@@ -3,12 +3,11 @@ import printList from '../../modules/printList/index.js'
 import Element from '../Element/index.js'
 
 const Task = (props) => {
-    
-
     const _checkbox = Element({
         type: 'div',
         classList: ['checkbox', props.done ? 'checked' : ''],
         onClick: () => {
+            const $parent = document.querySelector('.box-task')
             _checkbox.classList.toggle('checked')
             data.update(props._id, { done: !props.done })
 
@@ -51,7 +50,7 @@ const Task = (props) => {
     const _deleteTrash = Element({
         type: 'img',
         classList: ['delete-trash'],
-        src: './imagem/trash-can.png',
+        src: '../imagem/trash-can.png',
         onClick: () => {
             const $parent = document.querySelector('.box-task')
             data.delete(props._id)
