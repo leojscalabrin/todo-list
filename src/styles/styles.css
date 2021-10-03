@@ -88,6 +88,22 @@ body{
     align-items: center;
     color: #b3ec2a;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: addTask 300ms ease-in;
+}
+
+@keyframes addTask{
+    33%{
+        transform: scale(120%);
+        opacity: 25%;
+    }
+    66%{
+        transform: scale(110%);
+        opacity: 50%;
+    }
+    100%{
+        transform: scale(105%);
+        opacity: 75%;
+    }
 }
 
 .task-wrapper:hover{
@@ -134,10 +150,10 @@ body{
     display: none;
 }
 
-.hide{
-    display: none;
-}
-
 .show {
     display: flex;
+}
+
+.hide{
+    display: none;
 }
